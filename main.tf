@@ -32,10 +32,11 @@ resource "github_repository" "this" {
     repository.name => repository
   }
 
-  allow_merge_commit = false
-  allow_rebase_merge = false
-  allow_squash_merge = true
-  has_projects       = false
-  has_wiki           = false
-  name               = each.key
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
+  allow_squash_merge     = true
+  delete_branch_on_merge = true
+  has_projects           = false
+  has_wiki               = false
+  name                   = each.key
 }
