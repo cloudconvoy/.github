@@ -1,5 +1,11 @@
 [
   {
     "name": ".github"
+  },
+  {
+    "name": "aws"
+  },
+  {
+    "name": "backend"
   }
 ]
