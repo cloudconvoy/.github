@@ -1,11 +1,14 @@
 [
   {
+    "description": "Manages resources in the cloudconvoy GitHub organization",
     "name": ".github"
   },
   {
+    "description": "Manages resources in the cloudconvoy AWS account",
     "name": "aws"
   },
   {
+    "description": "Manages the S3 bucket and DynamoDB table for writing Terraform state",
     "name": "backend"
   }
 ]

@@ -36,6 +36,7 @@ resource "github_repository" "this" {
   allow_rebase_merge     = false
   allow_squash_merge     = true
   delete_branch_on_merge = true
+  description            = lookup(each.value, "description", "")
   has_projects           = false
   has_wiki               = false
   name                   = each.key
