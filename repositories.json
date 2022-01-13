@@ -1,7 +1,8 @@
 [
   {
     "description": "Manages resources in the cloudconvoy GitHub organization",
-    "name": ".github"
+    "name": ".github",
+    "visibility": "public"
   },
   {
     "description": "Manages resources in the cloudconvoy AWS account",

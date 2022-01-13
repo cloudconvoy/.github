@@ -41,4 +41,5 @@ resource "github_repository" "this" {
   has_wiki               = false
   name                   = each.key
   topics                 = concat(lookup(each.value, "topics", []), ["terraform-managed"])
+  visibility             = lookup(each.value, "visibility", "private")
 }
