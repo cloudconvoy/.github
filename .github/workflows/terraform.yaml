@@ -16,6 +16,9 @@ jobs:
         run: terraform fmt -check
       - name: Check whether the configuration is valid
         run: terraform validate
+      - if: ${{ github.event_name == 'pull_request' }}
+        name: Show changes required by the current configuration
+        run: terraform plan
       - if: ${{ github.ref == 'refs/heads/main' }}
         name: Create or update infrastructure
         run: terraform apply -auto-approve
