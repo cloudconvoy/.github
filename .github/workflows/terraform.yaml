@@ -16,7 +16,8 @@ jobs:
         run: terraform fmt -check
       - name: Check whether the configuration is valid
         run: terraform validate
-      - name: Create or update infrastructure
+      - if: ${{ github.ref == 'refs/heads/main' }}
+        name: Create or update infrastructure
         run: terraform apply -auto-approve
 name: Terraform
 on: push
