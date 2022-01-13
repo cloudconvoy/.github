@@ -23,4 +23,6 @@ jobs:
         name: Create or update infrastructure
         run: terraform apply -auto-approve
 name: Terraform
-on: push
+on:
+  - pull_request
+  - push
