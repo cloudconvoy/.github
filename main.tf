@@ -26,20 +26,16 @@ data "aws_secretsmanager_secret_version" "this" {
   version_stage = "AWSCURRENT"
 }
 
-resource "github_repository" "this" {
+module "project" {
   for_each = {
     for repository in jsondecode(file("${path.module}/repositories.json")) :
     repository.name => repository
   }
+  source = "./modules/project"
 
-  allow_merge_commit     = false
-  allow_rebase_merge     = false
-  allow_squash_merge     = true
-  delete_branch_on_merge = true
-  description            = lookup(each.value, "description", "")
-  has_projects           = false
-  has_wiki               = false
-  name                   = each.key
-  topics                 = concat(lookup(each.value, "topics", []), ["terraform-managed"])
-  visibility             = lookup(each.value, "visibility", "private")
+  description        = lookup(each.value, "description", "")
+  gitignore_template = lookup(each.value, "gitignore_template", "")
+  name               = each.key
+  topics             = lookup(each.value, "topics", [])
+  visibility         = lookup(each.value, "visibility", "private")
 }
