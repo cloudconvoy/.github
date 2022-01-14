@@ -11,5 +11,10 @@
   {
     "description": "Manages the S3 bucket and DynamoDB table for writing Terraform state",
     "name": "backend"
+  },
+  {
+    "description": "The cloudconvoy website",
+    "name": "cloudconvoy.github.io",
+    "visibility": "public"
   }
 ]
