@@ -21,6 +21,7 @@ resource "github_repository" "this" {
 }
 
 resource "github_repository_file" "this" {
+  auto_init           = true
   branch              = github_repository.this.default_branch
   content             = templatefile("${local.template_path}/README.md", local.parameter_overrides)
   file                = "README.md"
