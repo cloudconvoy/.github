@@ -1,3 +1,3 @@
-## ${repository.name}
+# `cloudconvoy::${repository.name}`
 
-> ${repository.description}
+${repository.description}
