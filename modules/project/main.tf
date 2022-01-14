@@ -21,8 +21,9 @@ resource "github_repository" "this" {
 }
 
 resource "github_repository_file" "this" {
-  branch     = github_repository.this.default_branch
-  content    = templatefile("${local.template_path}/README.md", local.parameter_overrides)
-  file       = "README.md"
-  repository = github_repository.this.name
+  branch              = github_repository.this.default_branch
+  content             = templatefile("${local.template_path}/README.md", local.parameter_overrides)
+  file                = "README.md"
+  overwrite_on_create = true
+  repository          = github_repository.this.name
 }
