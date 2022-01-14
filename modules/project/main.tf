@@ -21,10 +21,16 @@ resource "github_repository" "this" {
   visibility             = var.visibility
 }
 
+// https://api.github.com/users/github-actions[bot]
+// https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-user-account/managing-email-preferences/setting-your-commit-email-address
 resource "github_repository_file" "this" {
+  for_each = fileset("${path.module}/templates", "**")
+
   branch              = github_repository.this.default_branch
-  content             = templatefile("${local.template_path}/README.md", local.parameter_overrides)
-  file                = "README.md"
+  commit_author       = "github-actions[bot]"
+  commit_email        = "41898282+github-actions[bot]@users.noreply.github.com"
+  content             = templatefile("${local.template_path}/${each.value}", local.parameter_overrides)
+  file                = each.value
   overwrite_on_create = true
   repository          = github_repository.this.name
 }
