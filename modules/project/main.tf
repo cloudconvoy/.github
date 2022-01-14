@@ -11,6 +11,7 @@ resource "github_repository" "this" {
   allow_merge_commit     = false
   allow_rebase_merge     = false
   allow_squash_merge     = true
+  auto_init              = true
   delete_branch_on_merge = true
   description            = var.description
   has_projects           = false
@@ -21,7 +22,6 @@ resource "github_repository" "this" {
 }
 
 resource "github_repository_file" "this" {
-  auto_init           = true
   branch              = github_repository.this.default_branch
   content             = templatefile("${local.template_path}/README.md", local.parameter_overrides)
   file                = "README.md"
