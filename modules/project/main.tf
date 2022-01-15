@@ -14,6 +14,7 @@ resource "github_repository" "this" {
   auto_init              = true
   delete_branch_on_merge = true
   description            = var.description
+  gitignore_template     = var.gitignore_template
   has_projects           = false
   has_wiki               = false
   name                   = var.name

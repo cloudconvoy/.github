@@ -16,5 +16,10 @@
     "description": "The cloudconvoy website",
     "name": "cloudconvoy.github.io",
     "visibility": "public"
+  },
+  {
+    "description": "EKS cluster configuration",
+    "gitignore_template": "Terraform",
+    "name": "eks"
   }
 ]
