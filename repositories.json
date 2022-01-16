@@ -21,5 +21,10 @@
     "description": "EKS cluster configuration",
     "gitignore_template": "Terraform",
     "name": "eks"
+  },
+  {
+    "description": "Manages resources in Terraform Cloud",
+    "gitignore_template": "Terraform",
+    "name": "tfe"
   }
 ]
