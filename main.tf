@@ -14,16 +14,12 @@ provider "aws" {
 
 provider "github" {
   owner = "cloudconvoy"
-  token = data.aws_secretsmanager_secret_version.this.secret_string
+  token = data.aws_ssm_parameter.this.value
 }
 
-data "aws_secretsmanager_secret" "this" {
-  name = "GITHUB_TOKEN"
-}
-
-data "aws_secretsmanager_secret_version" "this" {
-  secret_id     = data.aws_secretsmanager_secret.this.id
-  version_stage = "AWSCURRENT"
+data "aws_ssm_parameter" "this" {
+  name            = "/aws/reference/secretsmanager/GITHUB_TOKEN"
+  with_decryption = true
 }
 
 module "project" {
