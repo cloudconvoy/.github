@@ -20,7 +20,7 @@
   {
     "description": "EKS cluster configuration",
     "gitignore_template": "Terraform",
-    "name": "eks"
+    "name": "cluster"
   },
   {
     "description": "EKS cluster networking configuration",
