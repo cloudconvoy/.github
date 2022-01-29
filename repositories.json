@@ -23,11 +23,6 @@
     "name": "cluster"
   },
   {
-    "description": "EKS cluster networking configuration",
-    "gitignore_template": "Terraform",
-    "name": "cluster-networking"
-  },
-  {
     "description": "Manages resources in Terraform Cloud",
     "gitignore_template": "Terraform",
     "name": "tfe"
