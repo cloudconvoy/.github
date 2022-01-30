@@ -26,5 +26,10 @@
     "description": "Manages resources in Terraform Cloud",
     "gitignore_template": "Terraform",
     "name": "tfe"
+  },
+  {
+    "description": "Reads secrets from Amazon Web Services Secrets Manager",
+    "gitignore_template": "Terraform",
+    "name": "terraform-aws-secrets"
   }
 ]
