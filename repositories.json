@@ -31,5 +31,10 @@
     "description": "Reads secrets from Amazon Web Services Secrets Manager",
     "gitignore_template": "Terraform",
     "name": "terraform-aws-secrets"
+  },
+  {
+    "description": "The AWS Load Balancer Controller manages AWS Elastic Load Balancers for a Kubernetes cluster",
+    "gitignore_template": "Terraform",
+    "name": "aws-load-balancer-controller"
   }
 ]
