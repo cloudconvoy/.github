@@ -36,5 +36,10 @@
     "description": "The AWS Load Balancer Controller manages AWS Elastic Load Balancers for a Kubernetes cluster",
     "gitignore_template": "Terraform",
     "name": "aws-load-balancer-controller"
+  },
+  {
+    "description": "Creates an IAM role for your Kubernetes service account",
+    "gitignore_template": "Terraform",
+    "name": "terraform-aws-iam-service-account"
   }
 ]
