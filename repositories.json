@@ -40,6 +40,12 @@
   {
     "description": "Creates an IAM role for your Kubernetes service account",
     "gitignore_template": "Terraform",
-    "name": "terraform-aws-iam-service-account"
+    "name": "terraform-aws-iam-service-account",
+    "visibility": "public"
+  },
+  {
+    "description": "Installs the kube-prometheus stack",
+    "gitignore_template": "Terraform",
+    "name": "kube-prometheus"
   }
 ]
