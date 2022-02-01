@@ -28,6 +28,7 @@ resource "github_repository_file" "this" {
   for_each = fileset("${path.module}/templates", "**")
 
   branch              = github_repository.this.default_branch
+  commit_author       = "github-actions[bot]"
   commit_email        = "41898282+github-actions[bot]@users.noreply.github.com"
   content             = templatefile("${local.template_path}/${each.value}", local.parameter_overrides)
   file                = each.value
