@@ -47,5 +47,10 @@
     "description": "Installs the kube-prometheus stack",
     "gitignore_template": "Terraform",
     "name": "kube-prometheus"
+  },
+  {
+    "description": "ExternalDNS synchronizes exposed Kubernetes Services and Ingresses with DNS providers",
+    "gitignore_template": "Terraform",
+    "name": "external-dns"
   }
 ]
