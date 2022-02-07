@@ -52,5 +52,10 @@
     "description": "ExternalDNS synchronizes exposed Kubernetes Services and Ingresses with DNS providers",
     "gitignore_template": "Terraform",
     "name": "external-dns"
+  },
+  {
+    "description": "Additional Kubernetes manifests to deploy after cluster creation",
+    "gitignore_template": "Terraform",
+    "name": "manifests"
   }
 ]
