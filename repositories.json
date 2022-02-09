@@ -59,8 +59,8 @@
     "name": "manifests"
   },
   {
-    "description": "Terraform configuration to create an EC2 instance with necessary toolchains",
-    "gitignore_template": "Terraform",
-    "name": "workstation"
+    "description": "Packer template to provision a Docker image for development",
+    "gitignore_template": "Packer",
+    "name": "dockerfile"
   }
 ]
