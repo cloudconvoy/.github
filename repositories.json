@@ -59,8 +59,7 @@
     "name": "manifests"
   },
   {
-    "description": "A collection of monitoring mixins",
-    "gitignore_template": "Terraform",
-    "name": "mixins"
+    "description": "Prometheus rules, Grafana dashboards, and more",
+    "name": "kube-prometheus"
   }
 ]
