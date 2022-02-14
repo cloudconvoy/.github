@@ -57,10 +57,5 @@
     "description": "Additional Kubernetes manifests to deploy after cluster creation",
     "gitignore_template": "Terraform",
     "name": "manifests"
-  },
-  {
-    "description": "Packer template to provision a Docker image for development",
-    "gitignore_template": "Packer",
-    "name": "dockerfile"
   }
 ]
