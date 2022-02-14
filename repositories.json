@@ -57,5 +57,10 @@
     "description": "Additional Kubernetes manifests to deploy after cluster creation",
     "gitignore_template": "Terraform",
     "name": "manifests"
+  },
+  {
+    "description": "A collection of monitoring mixins",
+    "gitignore_template": "Terraform",
+    "name": "mixins"
   }
 ]
